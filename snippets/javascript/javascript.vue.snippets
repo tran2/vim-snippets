@@ -1,0 +1,15 @@
+snippet vtest
+	import mountComponent from '@../test/helper/mount-component';
+	import ${1} from './${2}';
+
+	describe('${3}.vue', () => {
+	let wrapper;
+		beforeEach(() => {
+			wrapper = mountComponent(${4})
+		});
+
+		it('is a Vue component', () => {
+			expect(wrapper.isVueComponent).toEqual(true);
+		});
+	})
+
